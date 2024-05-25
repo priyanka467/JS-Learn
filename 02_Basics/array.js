@@ -26,14 +26,57 @@ const myArr2 = new Array(1, 2, 3, 4)
 
 // slice, splice
 
-console.log("A ", myArr);
+// console.log("A ", myArr);
 
-const myn1 = myArr.slice(1, 3)
+// const myn1 = myArr.slice(1, 3)
 
-console.log(myn1);
-console.log("B ", myArr);
+// console.log(myn1);
+// console.log("B ", myArr);
 
 
-const myn2 = myArr.splice(1, 3)
-console.log("C ", myArr);
-console.log(myn2);
+// const myn2 = myArr.splice(1, 3)
+// console.log("C ", myArr);
+// console.log(myn2);
+
+
+const myArrayOrigial = [22,11,33,2,4,1]
+console.log(myArrayOrigial.slice(1, 4)); //[ 11, 33, 2 ]
+console.log(myArrayOrigial); // original Array didn't change [ 22, 11, 33, 2, 4, 1 ]
+console.log(myArrayOrigial.splice(1, 4)); //[ 11, 33, 2, 4 ]
+console.log(myArrayOrigial); // original Array changed, original array manipulated [ 22, 1 ]
+
+// spread operator ...myArray -> spreads all the element inisdes it
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+const marvel_heros = ["thor", "Ironman", "spiderman"]
+const dc_heros = ["superman", "flash", "batman"]
+
+// marvel_heros.push(dc_heros)
+
+// console.log(marvel_heros);
+// console.log(marvel_heros[3][1]);
+
+// const allHeros = marvel_heros.concat(dc_heros)
+// console.log(allHeros);
+
+const all_new_heros = [...marvel_heros, ...dc_heros]
+
+// console.log(all_new_heros);
+
+const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
+
+const real_another_array = another_array.flat(Infinity)
+console.log(real_another_array);
+
+
+
+console.log(Array.isArray("Hitesh"))
+console.log(Array.from("Hitesh"))
+console.log(Array.from({name: "hitesh"})) // interesting
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3));

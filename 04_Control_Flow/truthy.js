@@ -33,11 +33,11 @@ val1 = null ?? 10 ?? 20
 
 
 
-.log(val1);
+console.log(val1);
 
 // Terniary Operator
 
 // condition ? true : false
 
 const iceTeaPrice = 100
-iceTeaPrice <= 80 ? .log("less than 80") : console.log("more than 80")
+iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")

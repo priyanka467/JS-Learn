@@ -167,3 +167,64 @@ function newGame() {
 
 
 ```
+#Project 5
+```
+console.log('Project 5');
+const insert = document.querySelector('#insert')
+window.addEventListener('keydown', (e) => {
+  console.log('pk', e);
+  insert.innerHTML = `
+  <div class = 'color'>
+  <table>
+  <tr>
+    <th>key</th>
+    <th>KeyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === '' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  </div>
+  
+  `;
+});
+
+```
+
+#Project 6
+```
+const randomColorGenerator = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+    console.log(color);
+  }
+  return color;
+};
+let intervalID = 0;
+const startChangingColor = function () {
+  if (!intervalID) {
+    intervalID = setInterval(changeBgColor, 1000);
+  }
+};
+function changeBgColor() {
+  document.body.style.backgroundColor = randomColorGenerator();
+}
+const stopChangingColor = function () {
+  clearInterval(intervalID);
+  intervalID = null;
+};
+
+const startButton = document
+  .querySelector('#start')
+  .addEventListener('click', startChangingColor);
+const stopButton = document
+  .querySelector('#stop')
+  .addEventListener('click', stopChangingColor);
+
+
+```

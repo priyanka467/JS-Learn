@@ -6,7 +6,7 @@ class User {
         this.email = email;
         this.password = password
     }
-
+// function keywoed nhin lagaate classes k ander and isko method bolenge yahan
     encryptPassword(){
         return `${this.password}abc`
     }
@@ -41,3 +41,4 @@ const tea = new User("tea", "tea@gmail.com", "123")
 
 console.log(tea.encryptPassword());
 console.log(tea.changeUsername());
+// constructor call kab hoga---> jaise hi class se ek object initialise hoga- means jaise hi new keyword kaam me loge waise hi apne aap constructor call ho jata h
